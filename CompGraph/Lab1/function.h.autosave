@@ -1,0 +1,18 @@
+#ifndef FUNCTION_H
+#define FUNCTION_H
+
+#include <QWidget>
+
+class Function : public QWidget
+{
+	Q_OBJECT
+public:
+	explicit Function(QWidget *parent = nullptr);
+	double f(double phi, double a);
+	
+signals:
+
+public slots:
+};
+
+#endif // FUNCTION_H
