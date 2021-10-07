@@ -204,14 +204,14 @@ void FunctionWidget::drawAxes(QPainter *qp)
 		qp->setPen(axes_pen);
 		qp->drawLine(QPointF(0, center.y() + y), QPointF(width(), center.y() + y));
 		qp->setPen(pen);
-		qp->drawText(QPointF(center.x() + 5, center.y() + y), QString::number(round(y / scale * 100) / 100.));
+		qp->drawText(QPointF(center.x() + 5, center.y() + y), QString::number(round(-y / scale * 100) / 100.));
 	}
 	for(int y = axes_scale; y < height() + center.y(); y += axes_scale)
 	{
 		qp->setPen(axes_pen);
 		qp->drawLine(QPointF(0, center.y() - y), QPointF(width(), center.y() - y));
 		qp->setPen(pen);
-		qp->drawText(QPointF(center.x() + 5, center.y() - y), QString::number(round(-y / scale * 100) / 100.));
+		qp->drawText(QPointF(center.x() + 5, center.y() - y), QString::number(round(y / scale * 100) / 100.));
 	}
 
 }
